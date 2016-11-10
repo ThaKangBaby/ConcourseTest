@@ -1,5 +1,7 @@
 #!/bin/bash
 
-git pull --rebase
+#git pull --rebase
 
-git push origin ready
+#git push origin ready
+
+echo "TEST SCRIPT RUNNING!!!!"
