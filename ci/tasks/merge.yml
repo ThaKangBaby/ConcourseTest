@@ -9,7 +9,7 @@ inputs:
 - name: Ready-branch
 
 run:
-  path: sh
-  args: git status
+  path: git
+  args: [status]
   #args: ["A TASK HAS RAN!!"]
   #ci/scripts/testscript
