@@ -9,6 +9,6 @@ inputs:
 - name: Ready-branch
 
 run:
-  path: echo
-  args: ["A TASK HAS RAN!!"]
+  path: Master/ci/scripts/testscript
+  #args: ["A TASK HAS RAN!!"]
   #ci/scripts/testscript
