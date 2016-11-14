@@ -12,4 +12,4 @@ git branch
 
 git remote -v
 
-#git checkout --track origin/ready
+git checkout ready
