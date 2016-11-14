@@ -12,6 +12,8 @@ git checkout ready
 
 git fetch --all #origin/ready
 
+ls
+
 git merge ready -m "Testing merge"
 
 echo "TEST SCRIPT RUNNING!!!!"
