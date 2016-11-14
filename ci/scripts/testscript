@@ -1,7 +1,11 @@
 #!/bin/bash
 
-#git pull --rebase
-
-#git push origin ready
-
 echo "TEST SCRIPT RUNNING!!!!"
+
+git branch
+
+echo "Git branch ran"
+
+git status
+
+echo "Git status ran"

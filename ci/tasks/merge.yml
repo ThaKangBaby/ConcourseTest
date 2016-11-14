@@ -9,7 +9,4 @@ inputs:
 - name: Fullrepo
 
 run:
-  path: git
-  args: [status]
-  path: git
-  args: [branch]
+  path: ./ci/scripts/testscript
