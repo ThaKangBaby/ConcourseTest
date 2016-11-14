@@ -5,3 +5,7 @@ cd Fullrepo
 ls
 
 git branch
+
+git checkout master
+
+git branch
