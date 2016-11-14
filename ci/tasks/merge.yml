@@ -9,4 +9,4 @@ inputs:
 - name: Fullrepo
 
 run:
-  path: ./ci/scripts/testscript
+  path: Fullrepo/ci/scripts/testscript.sh
