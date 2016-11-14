@@ -27,7 +27,7 @@ git checkout master
 git config --global user.email "thakangbaby@gmail.com"
 git config --global user.name "thakangbaby"
 
-git merge ready
+git merge ready -m "Trying to merge with script"
 
 git push origin master
 
