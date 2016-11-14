@@ -10,9 +10,8 @@ inputs:
 - name: Master
 
 run:
-  path: sh
+  path: git
   args:
-  - exc
   - status
     git branch
     #args: ["A TASK HAS RAN!!"]
