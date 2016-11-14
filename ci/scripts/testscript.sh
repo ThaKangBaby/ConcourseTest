@@ -4,7 +4,7 @@ cd Fullrepo
 
 ls
 
-git merge ready --no-commit
+git merge ready -m "Testing merge"
 
 echo "TEST SCRIPT RUNNING!!!!"
 
