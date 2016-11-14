@@ -5,7 +5,9 @@ cd Fullrepo
 ls
 git fetch
 
-git checkout -b localready origin/ready
+git branch localready
+
+git checkout localready origin/ready
 
 git merge ready -m "Testing merge"
 
