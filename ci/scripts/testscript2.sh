@@ -10,4 +10,4 @@ git checkout master
 
 git branch
 
-git checkout ready
+git checkout origin ready
