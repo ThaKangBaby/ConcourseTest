@@ -24,6 +24,9 @@ git branch
 
 git checkout master
 
+git config --global user.email "thakangbaby@gmail.com"
+git config --global user.name "thakangbaby"
+
 git merge ready
 
 git push origin master
