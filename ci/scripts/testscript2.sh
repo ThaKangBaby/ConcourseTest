@@ -19,3 +19,5 @@ git branch
 git remote -v
 
 git checkout ready
+
+git branch
