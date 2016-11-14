@@ -9,3 +9,5 @@ git branch
 git checkout master
 
 git branch
+
+git checkout ready
