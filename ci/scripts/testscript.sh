@@ -4,6 +4,10 @@ cd Fullrepo
 
 ls
 
+git branch
+
+echo "After branch"
+
 git fetch origin ready
 
 #git branch ready
