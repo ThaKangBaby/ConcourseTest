@@ -1,5 +1,7 @@
 #!/bin/bash
 
+ls
+
 echo "TEST SCRIPT RUNNING!!!!"
 
 git branch
