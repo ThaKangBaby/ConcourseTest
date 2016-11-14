@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd Fullrepo
+
 ls
 
 echo "TEST SCRIPT RUNNING!!!!"
