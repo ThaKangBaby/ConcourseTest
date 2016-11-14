@@ -4,9 +4,10 @@ cd Fullrepo
 
 ls
 
-#git fetch
+git fetch origin ready
 
 #git branch ready
+#git remote add upstr
 
 git checkout ready
 
