@@ -24,8 +24,8 @@ git branch
 
 git checkout master
 
-git config --global user.email "thakangbaby@gmail.com"
-git config --global user.name "thakangbaby"
+git config user.email "thakangbaby@gmail.com"
+git config user.name "thakangbaby"
 
 git merge ready -m "Trying to merge with script"
 
