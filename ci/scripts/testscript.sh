@@ -3,11 +3,14 @@
 cd Fullrepo
 
 ls
-git fetch
 
-git branch localready
+#git fetch
 
-git checkout localready origin/ready
+git branch ready
+
+git checkout ready
+
+git fetch --all #origin/ready
 
 git merge ready -m "Testing merge"
 
