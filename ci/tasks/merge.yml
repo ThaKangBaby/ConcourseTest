@@ -8,8 +8,13 @@ image_resource:
 inputs:
 - name: Ready-branch
 
+output:
+- name: Master
+
 run:
   path: git
-  args: [status]
+  args:
+  - status
+    git pull --help
   #args: ["A TASK HAS RAN!!"]
   #ci/scripts/testscript
