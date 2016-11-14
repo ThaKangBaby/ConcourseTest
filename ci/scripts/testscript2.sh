@@ -8,6 +8,8 @@ git clone https://github.com/ThaKangBaby/ConcourseTest.git
 
 ls
 
+cd ConcourseTest
+
 git branch
 
 git checkout master
