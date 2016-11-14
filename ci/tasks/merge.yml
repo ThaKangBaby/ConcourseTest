@@ -6,13 +6,10 @@ image_resource:
   source: {repository: thakangbaby/image}
 
 inputs:
-- name: Ready-branch
-- name: Master
+- name: Fullrepo
 
 run:
   path: git
-  args:
-  - status
-  - branch
-    #args: ["A TASK HAS RAN!!"]
-  #ci/scripts/testscript
+  args: [status]
+  path: git
+  args: [branch]
