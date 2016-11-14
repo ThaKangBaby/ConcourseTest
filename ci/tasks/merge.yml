@@ -13,6 +13,6 @@ run:
   path: git
   args:
   - status
-  - git branch
+  - branch
     #args: ["A TASK HAS RAN!!"]
   #ci/scripts/testscript
