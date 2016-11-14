@@ -10,4 +10,6 @@ git checkout master
 
 git branch
 
-git checkout --track origin/ready
+git remote -v
+
+#git checkout --track origin/ready
