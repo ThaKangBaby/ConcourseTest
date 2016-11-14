@@ -3,7 +3,7 @@
 cd Fullrepo
 
 ls
-
+git checkout ready
 git checkout master
 
 git merge ready -m "Testing merge"
