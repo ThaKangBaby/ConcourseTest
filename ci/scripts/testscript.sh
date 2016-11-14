@@ -11,6 +11,8 @@ git fetch origin ready
 
 git checkout ready
 
+echo "Timi wants to see"
+
 #git fetch --all #origin/ready
 
 ls ci/
