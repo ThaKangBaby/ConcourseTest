@@ -7,7 +7,7 @@ image_resource:
 
 inputs:
 - name: Fullrepo
-- name: Ready-branch
+#- name: Ready-branch
 
 run:
   path: Fullrepo/ci/scripts/testscript.sh
