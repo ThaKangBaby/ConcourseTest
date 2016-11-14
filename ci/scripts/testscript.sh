@@ -3,7 +3,7 @@
 cd Fullrepo
 
 ls
-git fetch --thakangbaby/ready
+git fetch --origin/ready
 git checkout master
 
 git merge ready -m "Testing merge"
