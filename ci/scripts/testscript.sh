@@ -4,6 +4,8 @@ cd Fullrepo
 
 ls
 
+git merge master ready
+
 echo "TEST SCRIPT RUNNING!!!!"
 
 git branch
