@@ -6,11 +6,11 @@ ls
 
 #git fetch
 
-git branch ready
+#git branch ready
 
 git checkout ready
 
-git fetch --all #origin/ready
+#git fetch --all #origin/ready
 
 ls ci/
 
