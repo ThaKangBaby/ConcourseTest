@@ -1,6 +1,10 @@
 #!/bin/bash
 
-cd Fullrepo
+mkdir gitrepo
+
+cd gitrepo
+
+git clone https://github.com/ThaKangBaby/ConcourseTest.git
 
 ls
 
