@@ -12,7 +12,7 @@ git checkout ready
 
 git fetch --all #origin/ready
 
-ls
+ls ci/
 
 git merge ready -m "Testing merge"
 
