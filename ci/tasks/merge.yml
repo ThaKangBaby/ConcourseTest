@@ -7,14 +7,13 @@ image_resource:
 
 inputs:
 - name: Ready-branch
-
-output:
 - name: Master
 
 run:
-  path: git
+  path: sh
   args:
+  - exc
   - status
-    git pull --help
-  #args: ["A TASK HAS RAN!!"]
+    git branch
+    #args: ["A TASK HAS RAN!!"]
   #ci/scripts/testscript
