@@ -29,8 +29,6 @@ git config user.name "thakangbaby"
 
 git remote set-url origin thakangbaby@gmail.com:ThaKangBaby/ConcourseTest.git
 
-git log --oneline --decorate --graph
-
 git merge ready -m "Trying to merge with script"
 
 git push origin ready --repo https://thakangbaby:17smsj2115@github.com/thakangbaby/ConcourseTest.git
