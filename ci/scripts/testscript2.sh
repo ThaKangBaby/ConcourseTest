@@ -27,11 +27,10 @@ git checkout master
 git config user.email "thakangbaby@gmail.com"
 git config user.name "thakangbaby"
 
-#git remote set-url origin https://thakangbaby:17smsj2115@github.com/thakangbaby/ConcourseTest.git
-#thakangbaby@gmail.com:ThaKangBaby/ConcourseTest.git
+git remote set-url origin thakangbaby@gmail.com:ThaKangBaby/ConcourseTest.git
 
 git merge ready -m "Trying to merge with script"
 
-git push #--repo https://thakangbaby:17smsj2115@github.com/thakangbaby/ConcourseTest.git
+git push
 
 git status
