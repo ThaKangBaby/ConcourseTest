@@ -31,6 +31,6 @@ git remote set-url origin thakangbaby@gmail.com:ThaKangBaby/ConcourseTest.git
 
 git merge ready -m "Trying to merge with script"
 
-git push origin master
+#git push origin master
 
 git status
