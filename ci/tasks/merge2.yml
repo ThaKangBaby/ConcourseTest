@@ -8,7 +8,7 @@ image_resource:
 
 inputs:
 - name: Fullrepo
-- private_key: {{private-repo-key}}
+- name: private_key
 #- name: Ready-branch
 
 run:
