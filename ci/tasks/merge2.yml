@@ -4,12 +4,10 @@ platform: linux
 image_resource:
   type: docker-image
   source: {repository: thakangbaby/image}
-    #private_key: {{private-repo-key}}
+
 
 inputs:
 - name: Fullrepo
-- name: private_key
-#- name: Ready-branch
 
 run:
   path: Fullrepo/ci/scripts/testscript2.sh
