@@ -10,6 +10,8 @@ ls
 
 cd ConcourseTest
 
+git config --global push.default simple
+
 git branch
 
 git checkout master
