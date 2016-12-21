@@ -6,6 +6,7 @@ set -x # print commands
 ls
 cd integration
 ls
+cd ConcourseTest
 git status
 
 # git clone repository integration
