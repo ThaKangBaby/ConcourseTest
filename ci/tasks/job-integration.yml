@@ -5,9 +5,9 @@ image_resource:
   source: {repository: thakangbaby/image}
 
 inputs:
-- name: repository
+- name: integration
 outputs:
-  - name: integration
+ - name: testingfolder
 
 run:
   path: ConcourseTest/ci/scripts/integration.sh
