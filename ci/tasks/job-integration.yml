@@ -2,7 +2,7 @@ platform: linux
 
 image_resource:
   type: docker-image
-  source: {repository: microsoft/dotnet}
+  source: {repository: thakangbaby/image}
 
 inputs:
 - name: repository
@@ -10,5 +10,4 @@ outputs:
   - name: integration
 
 run:
-  path: repository/integration/integration.sh
-
+  path: ConcourseTest/ci/scripts/integration.sh

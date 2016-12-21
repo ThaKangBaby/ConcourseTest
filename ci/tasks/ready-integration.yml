@@ -2,18 +2,12 @@ platform: linux
 
 image_resource:
   type: docker-image
-  source: {repository: microsoft/dotnet}
+  source: {repository: thakangbaby/image}
 
 inputs:
-- name: repository
+- name: ConcourseTest
 outputs:
   - name: integration
 
 run:
-  path: repository/integration/branch-quest.sh
-
-
-
-
-
-
+  path: ConcourseTest/ci/Script/branch-quest.sh
