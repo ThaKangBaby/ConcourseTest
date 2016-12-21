@@ -3,8 +3,9 @@
 set -e # fail fast
 set -x # print commands
 
+ls
+cd integration
 git clone https://github.com/ThaKangBaby/ConcourseTest.git
-cd ConcourseTest
 ll
 
 
