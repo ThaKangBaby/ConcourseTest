@@ -6,7 +6,7 @@ set -x # print commands
 ls
 cd integration
 git clone https://github.com/ThaKangBaby/ConcourseTest.git
-ll
+ls
 
 
 for remote in `git branch -r`
