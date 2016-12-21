@@ -6,6 +6,7 @@ image_resource:
 
 inputs:
 - name: integration
+- name: ConcourseTest
 outputs:
  - name: testingfolder
 
