@@ -10,4 +10,4 @@ outputs:
   - name: integration
 
 run:
-  path: ConcourseTest/ci/Script/branch-quest.sh
+  path: ConcourseTest/ci/Scripts/branch-quest.sh
