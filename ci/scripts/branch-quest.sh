@@ -13,7 +13,7 @@ git branch -r
 
 for remote in `git branch -r`
 do
-if [[ $remote == *"origin/ready/"* ]]
+if [[ "$remote" == *"origin/ready/"* ]]
 then
   echo $remote>ready_branch;
   cat ready_branch;
