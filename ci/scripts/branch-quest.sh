@@ -20,10 +20,8 @@ then
 fi
 done
 
-echo "Testing whats inside of file ready_branch"
-cat ready_branch
 
-#git checkout origin/master
+git checkout master
 git merge --ff-only $(cat ready_branch)
 
 #git push $TARGET_REPO HEAD:$TARGET_BRANCH
