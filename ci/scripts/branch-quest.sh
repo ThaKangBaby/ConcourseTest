@@ -19,3 +19,6 @@ then
   cat ready_branch;
 fi
 done
+
+ls
+cat ready_branch
