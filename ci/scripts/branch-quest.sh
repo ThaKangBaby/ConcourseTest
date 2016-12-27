@@ -22,7 +22,7 @@ done
 
 
 git checkout master
-git merge --ff-only $(cat ready_branch)
+git merges $(cat ready_branch)
 
 #git push $TARGET_REPO HEAD:$TARGET_BRANCH
 #git push $TARGET_REPO :$TRAVIS_BRANCH
