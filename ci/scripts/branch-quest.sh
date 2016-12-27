@@ -10,10 +10,15 @@ ls
 cd ConcourseTest
 
 
-for remote in `git branch -r`
-do
-if [[ $remote == *"origin/ready/"* ]]
-then
-  echo $remote>ready_branch;
+git branch -r | grep 'origin/ready/*' &> /dev/null
+if [ $? == 0 ]; then
+   echo $?
 fi
-done
+
+# for remote in `git branch -r`
+# do
+# if [[ $remote == *"origin/ready/"* ]]
+# then
+#   echo $remote>ready_branch;
+# fi
+# done

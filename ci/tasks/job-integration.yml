@@ -8,7 +8,7 @@ inputs:
 - name: integration
 - name: ConcourseTest
 outputs:
- - name: testingfolder
+- name: testingfolder
 
 run:
   path: ConcourseTest/ci/scripts/integration.sh
