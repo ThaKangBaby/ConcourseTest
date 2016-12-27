@@ -10,8 +10,7 @@ ls
 cd ConcourseTest
 
 
-git branch -r | grep 'origin/ready/*' &> /dev/null
-if [ $? == 0 ]; then
+if git branch -r | grep 'origin/ready/*' &> /dev/null; then
    echo $?
 fi
 
