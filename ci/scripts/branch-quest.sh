@@ -11,7 +11,7 @@ cd ConcourseTest
 
 git branch -r
 
-if git branch -r | grep 'origin/ready/*' &> /dev/null; then
+if git branch -r | grep 'origin/ready/'* &> /dev/null; then
    echo $?
 fi
 
