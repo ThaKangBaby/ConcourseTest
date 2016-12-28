@@ -31,7 +31,7 @@ git checkout master
 git merge --squash $(cat ready_branch)
 git commit -m $(cat ready_branch)
 
-git push origin:master $(cat ready_branch)
+git push origin master:$(cat ready_branch)
 #
 #
 #
