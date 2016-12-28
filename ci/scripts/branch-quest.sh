@@ -26,7 +26,7 @@ git config --global user.name "Sonny Singh"
 git checkout master
 
 git merge --squash $(cat ready_branch)
-git commit -m $(cat ready_branch) --author ConcourseCI
+git commit -m $(cat ready_branch)
 
 
 
