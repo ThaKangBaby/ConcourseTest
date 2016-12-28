@@ -5,7 +5,7 @@ set -x # print commands
 
 ls
 cd integration
-git clone https://thakangbaby:b2ab33bc973e9d9aef46017d4cc9f0f606142ba8@github.com/ThaKangBaby/ConcourseTest.git
+git clone https://thakangbaby:a3527b952368fb2183e02faf2c8dff64874fe0c0@github.com/ThaKangBaby/ConcourseTest.git
 ls
 cd ConcourseTest
 
