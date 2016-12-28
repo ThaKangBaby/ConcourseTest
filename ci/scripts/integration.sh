@@ -12,7 +12,7 @@ git status
 cat ready_branch
 
 git config --global user.email "thakangbaby@gmail.com"
-git config --global user.name "Sonny Singh"
+git config --global user.name "thakangbaby"
 
 git checkout master
 
@@ -22,7 +22,7 @@ git merge --squash $(cat ready_branch)
 git commit -m $(cat ready_branch)
 
 
-git push origin:master $(cat ready_branch)
+git push origin/master HEAD:$(cat ready_branch)
 
 # git clone repository integration
 # cd integration

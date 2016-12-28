@@ -23,6 +23,9 @@ done
 # git config --global user.email "thakangbaby@gmail.com"
 # git config --global user.name "Sonny Singh"
 #
+git config --global user.email "thakangbaby@gmail.com"
+git config --global user.name "thakangbaby"
+
 git checkout master
 #
 git merge --squash $(cat ready_branch)
