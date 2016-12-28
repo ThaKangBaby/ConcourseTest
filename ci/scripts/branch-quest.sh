@@ -5,7 +5,7 @@ set -x # print commands
 
 ls
 cd integration
-git clone https://thakangbaby:a3527b952368fb2183e02faf2c8dff64874fe0c0@github.com/ThaKangBaby/ConcourseTest.git
+git clone https://ThaKangBaby:a3527b952368fb2183e02faf2c8dff64874fe0c0@github.com/ThaKangBaby/ConcourseTest.git
 ls
 cd ConcourseTest
 
@@ -24,7 +24,10 @@ done
 # git config --global user.name "Sonny Singh"
 #
 git config --global user.email "thakangbaby@gmail.com"
-git config --global user.name "thakangbaby"
+git config --global user.name "ThaKangBaby"
+
+git remote rm origin
+git remote add origin https://ThaKangBaby:a3527b952368fb2183e02faf2c8dff64874fe0c0@github.com/ThaKangBaby/ConcourseTest.git
 
 git checkout master
 #
