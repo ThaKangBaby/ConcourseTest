@@ -26,7 +26,7 @@ done
 git config --global user.email "thakangbaby@gmail.com"
 git config --global user.name "ThaKangBaby"
 
-readybranch=$(cat "ready_branch")
+readybranch=$(cat "ready_branch" | tr --delete origin/)
 
 
 git remote rm origin
