@@ -7,8 +7,8 @@ image_resource:
 inputs:
 - name: integration
 - name: ConcourseTest
-outputs:
-- name: testingfolder
+# outputs:
+# - name: testingfolder
 
 run:
   path: ConcourseTest/ci/scripts/integration.sh
