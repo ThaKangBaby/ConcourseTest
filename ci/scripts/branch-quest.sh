@@ -30,5 +30,5 @@ git commit -m $(cat ready_branch)
 
 
 
-#git push $TARGET_REPO HEAD:$TARGET_BRANCH
+git push origin/master HEAD:$(cat ready_branch)
 #git push $TARGET_REPO :$TRAVIS_BRANCH
