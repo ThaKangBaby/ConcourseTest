@@ -26,19 +26,20 @@ done
 git config --global user.email "thakangbaby@gmail.com"
 git config --global user.name "ThaKangBaby"
 
-readybranch=$(cat "ready_branch")
-readybranch=${#*/readybranch}
+readybranch=$(cat ready_branch)
+readybranch2="${readybranch:7}"
+echo "$readybranch2"
 
 git remote rm origin
 git remote add origin https://ThaKangBaby:a3527b952368fb2183e02faf2c8dff64874fe0c0@github.com/ThaKangBaby/ConcourseTest.git
 
-git checkout $readybranch
+git checkout $readybranch2
 git checkout master
 
-git merge --squash $readybranch
-git commit -m $readybranch
+git merge --squash $readybranch2
+git commit -m $readybranch2
 
-git push origin $readybranch:master
+git push origin $readybranch2:master
 #
 #
 #
