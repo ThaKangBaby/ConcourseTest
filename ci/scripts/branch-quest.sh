@@ -30,11 +30,15 @@ git remote rm origin
 git remote add origin https://ThaKangBaby:a3527b952368fb2183e02faf2c8dff64874fe0c0@github.com/ThaKangBaby/ConcourseTest.git
 
 git checkout master
-#
-git merge --squash $(cat ready_branch)
-git commit -m $(cat ready_branch)
 
-git push origin master:$(cat ready_branch)
+$readybranch=(cat ready_branch)
+
+echo $readybranch
+
+git merge --squash $readybranch
+git commit -m $readybranch
+
+git push origin master:$readybranch
 #
 #
 #
