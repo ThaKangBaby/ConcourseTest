@@ -33,7 +33,7 @@ echo "$readybranch2"
 git remote rm origin
 git remote add origin https://ThaKangBaby:a3527b952368fb2183e02faf2c8dff64874fe0c0@github.com/ThaKangBaby/ConcourseTest.git
 
-git checkout -b $readybranch
+#git checkout -b $readybranch
 git checkout master
 
 git merge --squash $readybranch
