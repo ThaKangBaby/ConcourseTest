@@ -5,7 +5,7 @@ set -x # print commands
 
 ls
 cd integration
-git clone https://ThaKangBaby:48e6a67c1daadf3158a241d0fcbe85b4d6e613c5@github.com/ThaKangBaby/ConcourseTest.git
+git clone https://ThaKangBaby:6ba0bf2d7a0b5600f46106d9e25fc1f00d08c57d@github.com/ThaKangBaby/ConcourseTest.git
 ls
 cd ConcourseTest
 
@@ -39,7 +39,7 @@ git checkout master
 git merge --squash $readybranch --commit
 #git commit -m $readybranch
 
-git push https://ThaKangBaby:48e6a67c1daadf3158a241d0fcbe85b4d6e613c5@github.com/ThaKangBaby/ConcourseTest.git $readybranch:master
+git push https://ThaKangBaby:6ba0bf2d7a0b5600f46106d9e25fc1f00d08c57d@github.com/ThaKangBaby/ConcourseTest.git $readybranch:master
 #
 #
 #
