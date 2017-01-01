@@ -36,8 +36,8 @@ echo "$readybranch2"
 #git checkout -b $readybranch
 git checkout master
 
-git merge --squash $readybranch --commit
-#git commit -m $readybranch
+git merge --squash $readybranch
+git commit -m $readybranch
 
 git push https://ThaKangBaby:6ba0bf2d7a0b5600f46106d9e25fc1f00d08c57d@github.com/ThaKangBaby/ConcourseTest.git $readybranch:master
 #

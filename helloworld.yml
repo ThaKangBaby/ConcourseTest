@@ -1,0 +1,65 @@
+resources:
+   - name: Repo
+     type: git
+     source:
+       uri: https://github.com/leereilly/hello-world-java.git
+       branch: master
+       git_config:
+       - name: core.bigFileThreshold
+         value: 10m
+       disable_ci_skip: true
+   - name: ConcourseTest
+     type: git
+     source:
+       uri: https://github.com/ThaKangBaby/ConcourseTest.git
+       branch: master
+       git_config:
+       - name: core.bigFileThreshold
+         value: 10m
+   - name: fetch-ready-branches
+     type: time
+     source:
+       interval: 10s
+
+jobs:
+- name: Check-Ready-Branch
+  plan:
+  - get: Repo
+    trigger: false
+  - get: ConcourseTest
+    trigger: true
+  - get: fetch-ready-branches
+    trigger: true
+  - task: Check-ready-branches
+    file: ConcourseTest/ci/tasks/ready-integration.yml
+  # - task: job-integration
+  #   file: ConcourseTest/ci/tasks/job-integration.yml
+
+
+# - name: Output-Ready-Branch
+#   plan:
+#   - get: ConcourseTest
+  #   passed: [Check-Ready-Branch]
+  #   trigger: true
+  # - task: job-integration
+  #   file: ConcourseTest/ci/tasks/job-integration.yml
+
+
+
+    # config:
+    #   platform: linux
+    #   image_resource:
+    #     type: docker-image
+    #     source: {repository: thakangbaby/javabox, tag: "v1.1"}
+    #   outputs:
+    #   - name: testfolder
+    #   run:
+    #     path: sh
+    #     args:
+    #     - -exec
+    #     - |
+    #       touch testfolder/hi
+    #       ls -la
+    #       ls testfolder/
+
+  #- put: ConcourseTest
