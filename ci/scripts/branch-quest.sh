@@ -3,9 +3,11 @@
 set -e # fail fast
 set -x # print commands
 
+ssh-keyscan github.com >> ~/.ssh/known_hosts
+
 ls
 cd integration
-git clone ssh://git@github.com/ThaKangBaby/ConcourseTest.git -y
+git clone ssh://git@github.com/ThaKangBaby/ConcourseTest.git
 ls
 cd ConcourseTest
 
@@ -39,7 +41,7 @@ git checkout master
 git merge --squash $readybranch
 git commit -m $readybranch
 
-git push ssh://git@github.com/ThaKangBaby/ConcourseTest.git $readybranch:master 
+git push ssh://git@github.com/ThaKangBaby/ConcourseTest.git $readybranch:master
 #
 #
 #
