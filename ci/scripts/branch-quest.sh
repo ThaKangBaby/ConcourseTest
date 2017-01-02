@@ -3,7 +3,7 @@
 set -e # fail fast
 set -x # print commands
 
-cd ..
+cd /
 ls -la
 
 #ssh-keyscan github.com >> ~/.ssh/known_hosts
