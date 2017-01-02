@@ -3,14 +3,14 @@
 set -e # fail fast
 set -x # print commands
 
-# cd /
-# ls -la
-#
-# ls -la etc/ssh
-# ls -la home/
-# ls -la root/
-#
-ssh-keyscan github.com >> ~/.ssh/known_hosts
+cd /
+ls -la
+# #
+ls -la etc/ssh
+ls -la home/
+ls -la root/
+# #
+# ssh-keyscan github.com >> ~/.ssh/known_hosts
 
 
 ls
