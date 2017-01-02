@@ -6,9 +6,9 @@ set -x # print commands
 cd /
 ls -la
 
-ls etc/ssh
-ls home/
-ls root/
+ls -la etc/ssh
+ls -la home/
+ls -la root/
 
 #ssh-keyscan github.com >> ~/.ssh/known_hosts
 
