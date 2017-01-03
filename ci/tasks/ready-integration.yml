@@ -5,7 +5,7 @@ image_resource:
   source: {repository: thakangbaby/image}
 
 inputs:
-- name: Ready-branch
+- name: CheckingBranches
 - name: ConcourseTest
 
 outputs:

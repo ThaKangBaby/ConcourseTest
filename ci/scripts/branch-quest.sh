@@ -17,12 +17,13 @@ set -x # print commands
 #
 # ls
 # cd integration
-git clone Ready-branch integration
+git clone CheckingBranches integration
 
 #ssh://git@github.com/ThaKangBaby/ConcourseTest.git
 # ls
 cd integration
 
+ll
 
 git branch -r
 
