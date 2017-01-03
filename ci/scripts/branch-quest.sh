@@ -10,7 +10,9 @@ set -x # print commands
 # ls -la /home
 # ls -la /root
 
-# ssh-keyscan github.com >> ~/.ssh/known_hosts
+mkdir ~/.ssh/
+touch ~/.ssh/known_hosts
+ssh-keyscan github.com >> ~/.ssh/known_hosts
 
 
 ls
