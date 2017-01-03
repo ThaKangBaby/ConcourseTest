@@ -23,7 +23,7 @@ git clone CheckingBranches integration
 # ls
 cd integration
 
-ll
+ls -la
 
 git branch -r
 
