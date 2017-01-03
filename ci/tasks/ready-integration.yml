@@ -13,4 +13,4 @@ outputs:
 
 
 run:
-  path: ConcourseTest/ci/scripts/branch-quest.sh
+  path: CheckingBranches/ci/scripts/branch-quest.sh
