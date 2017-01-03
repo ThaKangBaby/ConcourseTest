@@ -10,16 +10,18 @@ set -x # print commands
 # ls -la /home
 # ls -la /root
 
-mkdir ~/.ssh/
-touch ~/.ssh/known_hosts
-ssh-keyscan github.com >> ~/.ssh/known_hosts
+# mkdir ~/.ssh/
+# touch ~/.ssh/known_hosts
+# ssh-keyscan github.com >> ~/.ssh/known_hosts
+#
+#
+# ls
+# cd integration
+git clone ConcourseTest integration
 
-
-ls
+#ssh://git@github.com/ThaKangBaby/ConcourseTest.git
+# ls
 cd integration
-git clone ssh://git@github.com/ThaKangBaby/ConcourseTest.git
-ls
-cd ConcourseTest
 
 git branch -r
 
@@ -51,7 +53,7 @@ git checkout master
 git merge --squash $readybranch
 git commit -m $readybranch
 
-git push ssh://git@github.com/ThaKangBaby/ConcourseTest.git $readybranch:master
+#git push ssh://git@github.com/ThaKangBaby/ConcourseTest.git $readybranch:master
 #
 #
 #
