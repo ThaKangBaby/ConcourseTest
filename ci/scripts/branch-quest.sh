@@ -4,7 +4,7 @@ set -e # fail fast
 set -x # print commands
 
 # cd /
-# ls -la
+ls -la
 #
 # ls -la /etc/ssh
 # ls -la /home
