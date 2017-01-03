@@ -6,7 +6,7 @@ image_resource:
 
 inputs:
 - name: CheckingBranches
-- name: ConcourseTest
+# - name: ConcourseTest
 
 outputs:
 - name: integration
