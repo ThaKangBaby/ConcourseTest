@@ -8,7 +8,7 @@ set -x # print commands
 #
 # ls -la /etc/ssh
 # ls -la /home
-# ls -la /root
+ls -la /root
 
 # mkdir ~/.ssh/
 # touch ~/.ssh/known_hosts
