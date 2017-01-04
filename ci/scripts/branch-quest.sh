@@ -25,7 +25,7 @@ cd integration
 
 # ls -la
 
-git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//" > readybranch
+sh -c 'git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//" > readybranch'
 
 
 # for remote in `git branch -r`
