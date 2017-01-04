@@ -43,7 +43,7 @@ sh -c 'git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//" > rea
 git config --global user.email "thakangbaby@gmail.com"
 git config --global user.name "ThaKangBaby"
 
-readybranch=$(cat ready_branch)
+readybranch=$(cat readybranch)
 #readybranch2="${readybranch:7}"
 #echo "$readybranch2"
 
