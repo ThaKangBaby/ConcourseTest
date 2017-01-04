@@ -3,15 +3,12 @@ platform: linux
 image_resource:
   type: docker-image
   source: {repository: thakangbaby/image}
-  # volumes: ["/root/.ssh:/root/.ssh"]
 
 inputs:
 - name: CheckingBranches
-# - name: ConcourseTest
 
 outputs:
 - name: integration
-
 
 run:
   path: CheckingBranches/ci/scripts/branch-quest.sh
