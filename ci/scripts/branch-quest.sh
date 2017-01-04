@@ -4,7 +4,7 @@ set -e # fail fast
 set -x # print commands
 
 # cd /
-ls -la CheckingBranches/
+
 #
 # ls -la /etc/ssh
 # ls -la /home
@@ -17,7 +17,7 @@ ls -la CheckingBranches/
 #
 # ls
 # cd integration
-git clone CheckingBranches integration
+git clone https://github.com/ThaKangBaby/ConcourseTest.git integration
 
 #ssh://git@github.com/ThaKangBaby/ConcourseTest.git
 # ls
