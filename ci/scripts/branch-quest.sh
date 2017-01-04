@@ -8,7 +8,7 @@ set -x # print commands
 #
 # ls -la /etc/ssh
 # ls -la /home
-ls -la /root
+ls -la /root/.ssh
 
 # mkdir ~/.ssh/
 # touch ~/.ssh/known_hosts
@@ -23,7 +23,7 @@ git clone https://github.com/ThaKangBaby/ConcourseTest.git integration
 # ls
 cd integration
 
-ls -la
+# ls -la
 
 git branch -r
 
