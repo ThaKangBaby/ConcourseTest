@@ -43,7 +43,7 @@ git config --global user.email "thakangbaby@gmail.com"
 git config --global user.name "ThaKangBaby"
 
 readybranch=$(cat ready_branch)
-readybranch2="${readybranch:7}"
+#readybranch2="${readybranch:7}"
 echo "$readybranch2"
 
 #git remote rm origin
