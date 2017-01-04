@@ -25,16 +25,17 @@ cd integration
 
 # ls -la
 
-git branch -r
+git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//" > readybranch
 
-for remote in `git branch -r`
-do
-if [[ "$remote" == *"origin/ready/"* ]]
-then
-  echo $remote>ready_branch;
-  #cat ready_branch;
-fi
-done
+
+# for remote in `git branch -r`
+# do
+# if [[ "$remote" == *"origin/ready/"* ]]
+# then
+#   echo $remote>ready_branch;
+#   #cat ready_branch;
+# fi
+# done
 
 # git config --global user.email "thakangbaby@gmail.com"
 # git config --global user.name "Sonny Singh"
