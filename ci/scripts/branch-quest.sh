@@ -25,7 +25,7 @@ cd integration
 
 # ls -la
 
-sh -c 'git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//" > readybranch'
+#sh -c 'git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//" > readybranch'
 
 
 # for remote in `git branch -r`
@@ -43,7 +43,7 @@ sh -c 'git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//" > rea
 git config --global user.email "thakangbaby@gmail.com"
 git config --global user.name "ThaKangBaby"
 
-readybranch=$(cat readybranch)
+readybranch=$(git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//")
 #readybranch2="${readybranch:7}"
 #echo "$readybranch2"
 
