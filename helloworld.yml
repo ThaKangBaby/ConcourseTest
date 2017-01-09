@@ -1,37 +1,48 @@
+resource_types:
+  - name: git-branch-heads
+    type: docker-image
+    source:
+      repository: vito/git-branch-heads-resource
+
 resources:
-   - name: Repo
-     type: git
+   - name: CheckingBranches
+     type: git-branch-heads
      source:
-       uri: https://github.com/leereilly/hello-world-java.git
-       branch: master
+       uri: git@github.com:ThaKangBaby/ConcourseTest.git
+       branch: [ready/*]
+       private_key: {{private_key}}
        git_config:
        - name: core.bigFileThreshold
          value: 10m
-       disable_ci_skip: true
    - name: ConcourseTest
      type: git
      source:
-       uri: https://github.com/ThaKangBaby/ConcourseTest.git
+       uri: git@github.com:ThaKangBaby/ConcourseTest.git
        branch: master
+       private_key: {{private_key}}
        git_config:
        - name: core.bigFileThreshold
          value: 10m
-   - name: fetch-ready-branches
-     type: time
-     source:
-       interval: 10s
+  #  - name: fetch-ready-branches
+  #    type: time
+  #    source:
+  #      interval: 10s
 
 jobs:
 - name: Check-Ready-Branch
   plan:
-  - get: Repo
+  - get: CheckingBranches
     trigger: false
   - get: ConcourseTest
     trigger: true
-  - get: fetch-ready-branches
-    trigger: true
+  # - get: fetch-ready-branches
+  #   trigger: true
   - task: Check-ready-branches
     file: ConcourseTest/ci/tasks/ready-integration.yml
+    # params:
+    #   volumes: ["/root/.ssh:/root/.ssh"]
+  - put: ConcourseTest
+    params: {repository: integration}
   # - task: job-integration
   #   file: ConcourseTest/ci/tasks/job-integration.yml
 
