@@ -14,7 +14,7 @@ resources:
        git_config:
        - name: core.bigFileThreshold
          value: 10m
-   - name: Praqma.com
+   - name: Praqma-com
      type: git
      source:
        uri: git@github.com:ThaKangBaby/praqma.com.git
@@ -33,7 +33,7 @@ jobs:
   plan:
   - get: CheckingBranches
     trigger: false
-  - get: Praqma.com
+  - get: Praqma-com
     trigger: true
   - task: Check-ready-branches
     file: CheckingBranches/ci/tasks/buildtest.yml
