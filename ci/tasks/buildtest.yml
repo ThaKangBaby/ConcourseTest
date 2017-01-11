@@ -6,9 +6,10 @@ image_resource:
 
 inputs:
 - name: CheckingBranches
+- name: ConcourseTest
 
 outputs:
 - name: integration
 
 run:
-  path: CheckingBranches/ci/scripts/buildtest.sh
+  path: ConcourseTest/ci/scripts/buildtest.sh
