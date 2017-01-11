@@ -33,7 +33,7 @@ jobs:
   plan:
   - get: CheckingBranches
     trigger: false
-  - get: praqma.com
+  - get: Praqma.com
     trigger: true
   - task: Check-ready-branches
     file: CheckingBranches/ci/tasks/buildtest.yml
