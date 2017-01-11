@@ -18,7 +18,7 @@ resources:
      type: git
      source:
        uri: git@github.com:ThaKangBaby/praqma.com.git
-       branch: master
+       branch: gh-pages
        private_key: {{private_key}}
        git_config:
        - name: core.bigFileThreshold
