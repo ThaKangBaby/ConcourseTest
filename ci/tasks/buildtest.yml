@@ -6,7 +6,7 @@ image_resource:
 
 inputs:
 - name: CheckingBranches
-- name: Praqma-com
+- name: Praqma.com
 
 outputs:
 - name: integration
