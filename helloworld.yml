@@ -14,10 +14,10 @@ resources:
        git_config:
        - name: core.bigFileThreshold
          value: 10m
-   - name: ConcourseTest
+   - name: Praqma.com
      type: git
      source:
-       uri: git@github.com:ThaKangBaby/ConcourseTest.git
+       uri: git@github.com:ThaKangBaby/praqma.com.git
        branch: master
        private_key: {{private_key}}
        git_config:
@@ -33,10 +33,10 @@ jobs:
   plan:
   - get: CheckingBranches
     trigger: false
-  - get: ConcourseTest
+  - get: praqma.com
     trigger: true
   - task: Check-ready-branches
-    file: ConcourseTest/ci/tasks/buildtest.yml
+    file: CheckingBranches/ci/tasks/buildtest.yml
   # - put: ConcourseTest
   #   params: {repository: integration}
   # - task: job-integration

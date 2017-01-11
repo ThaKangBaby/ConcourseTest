@@ -6,10 +6,10 @@ image_resource:
 
 inputs:
 - name: CheckingBranches
-- name: ConcourseTest
+- name: praqma.com
 
 outputs:
 - name: integration
 
 run:
-  path: ConcourseTest/ci/scripts/buildtest.sh
+  path: CheckingBranches/ci/scripts/buildtest.sh
