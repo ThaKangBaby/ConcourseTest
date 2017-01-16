@@ -1,3 +1,8 @@
+#!/bin/bash
+
+set -e # fail fast
+set -x # print commands
+
 cd CheckingBranches
 readybranch=$(readybranch=$(git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//"))
 
