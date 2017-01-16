@@ -11,10 +11,10 @@ readybranch=$(git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//
 
 echo $readybranch
 
-if [ "$(readybranch)" != "" ]
-    then exit 0;
-    echo "exit 0"
+if [ "$readybranch" ]; then
+    echo "exit 0 - Ready Branch found!"
+    exit 0
 else
-    exit 1;
-    echo "exit 1"
+    echo "exit 1 - No Ready Branches found"
+    exit 1
 fi
