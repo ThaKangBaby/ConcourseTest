@@ -11,6 +11,11 @@ ls -la
 cd CheckingBranches
 readybranch=$(readybranch=$(git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//"))
 
+if [ $readybranch != "" ]
+    then exit 0;
+else
+    exit 1;
+fi
 
 git checkout $readybranch
 
@@ -20,8 +25,8 @@ git checkout master
 
 git merge --squash $readybranch
 
-#TEST
-TEST
+#TEST - Jekyll build TEST
+jekyll build --source Praqma.com --destination integration
 
 #On test success
 Push master to origin
@@ -31,10 +36,5 @@ Delete the ready branch remotely
 git fetch --prune
 
 #if [ $readybranch != "" ]
-
-#Testing for Jekyll buildtest
-jekyll --version
-
-jekyll build --source Praqma.com --destination integration
 
 ls -la integration

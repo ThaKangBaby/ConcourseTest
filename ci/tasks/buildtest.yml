@@ -12,4 +12,4 @@ outputs:
 - name: integration
 
 run:
-  path: CheckingBranches/ci/scripts/buildtest.sh
+  path: CheckingBranches/ci/scripts/checkreadybranch.sh

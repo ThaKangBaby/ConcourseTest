@@ -3,30 +3,15 @@
 set -e # fail fast
 set -x # print commands
 
-# cd /
 
-#
-# ls -la /etc/ssh
-# ls -la /home
 ls -la ~
 
-# mkdir ~/.ssh/
-# touch ~/.ssh/known_hosts
-# ssh-keyscan github.com >> ~/.ssh/known_hosts
-#
-#
-# ls
-# cd integration
 git clone https://github.com/ThaKangBaby/ConcourseTest.git integration
 
-#ssh://git@github.com/ThaKangBaby/ConcourseTest.git
-# ls
 cd integration
 
-# ls -la
 
-#sh -c 'git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//" > readybranch'
-
+git branch -r
 
 # for remote in `git branch -r`
 # do
@@ -37,28 +22,22 @@ cd integration
 # fi
 # done
 
-# git config --global user.email "thakangbaby@gmail.com"
-# git config --global user.name "Sonny Singh"
-#
 git config --global user.email "thakangbaby@gmail.com"
 git config --global user.name "ThaKangBaby"
 
-readybranch=$(git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//")
-#readybranch2="${readybranch:7}"
-#echo "$readybranch2"
+readybranch=$(readybranch=$(git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//"))
 
-#git remote rm origin
-#git remote add origin https://ThaKangBaby:a3527b952368fb2183e02faf2c8dff64874fe0c0@github.com/ThaKangBaby/ConcourseTest.git
+git checkout $readybranch
 
-#git checkout -b $readybranch
+git pull --rebase master
+
+TEST
+
 git checkout master
 
 git merge --squash $readybranch
-git commit -m $readybranch
 
-#git push ssh://git@github.com/ThaKangBaby/ConcourseTest.git $readybranch:master
-#
-#
-#
+#git commit -m "Master merged into ready"
+
 # git push origin/master HEAD:$(cat ready_branch)
 #git push $TARGET_REPO :$TRAVIS_BRANCH
