@@ -26,15 +26,23 @@ git checkout master
 git merge --squash $readybranch
 
 #TEST - Jekyll build TEST
-jekyll build --source Praqma.com --destination integration
+jekyll --version
+touch ../integration/results.txt
+jekyll build --source Praqma.com --destination ../integration > ../integration/results.txt
+cat ../integration/results.txt
 
-#On test success
-Push master to origin
+if [ $? -eq 0 ]; then
+    
+    #On test success
+    #Push master to origin
+    ls -la ../integration
+
+fi
 
 #Do this no matter outcome
-Delete the ready branch remotely
+Delete the ready branch 
+#git branch -dr $readybranch
+#git push origin :$readybranch
+
 git fetch --prune
 
-#if [ $readybranch != "" ]
-
-ls -la integration
