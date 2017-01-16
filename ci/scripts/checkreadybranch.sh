@@ -11,7 +11,7 @@ readybranch=$(git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//
 
 echo $readybranch
 
-if [ "$readybranch" != "" ]
+if [ "$(readybranch)" != "" ]
     then exit 0;
     echo "exit 0"
 else
