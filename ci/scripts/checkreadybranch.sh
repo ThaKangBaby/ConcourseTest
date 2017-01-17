@@ -5,17 +5,17 @@ set -x # print commands
 # echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 cd CheckingBranches
 ls -la
-echo "-----------------"
-git config --local -l
-echo "-----------------"
-# git fetch -v
-echo "-----------------"
-git status
-echo "-----------------"
-git --version
-echo "-----------------"
-git branch -avv
-echo "-----------------"
+# echo "-----------------"
+# git config --local -l
+# echo "-----------------"
+# # git fetch -v
+# echo "-----------------"
+# git status
+# echo "-----------------"
+# git --version
+# echo "-----------------"
+# git branch -avv
+# echo "-----------------"
 git branch -rv --list "origin/ready/*"
 
 
