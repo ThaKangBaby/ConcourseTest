@@ -3,6 +3,13 @@
 set -e # fail fast
 set -x # print commands
 cd CheckingBranches
+echo "-----------------"
+git status
+echo "-----------------"
+git --version
+echo "-----------------"
+git branch -avv
+echo "-----------------"
 git branch -rv --list "origin/ready/*"
 
 
