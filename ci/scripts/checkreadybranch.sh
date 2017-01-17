@@ -8,7 +8,7 @@ findReadyBranches(){
 }
 
 cd CheckingBranches
-readybranch=findReadyBranches
+readybranch=$(findReadyBranches)
 
 echo $readybranch
 
