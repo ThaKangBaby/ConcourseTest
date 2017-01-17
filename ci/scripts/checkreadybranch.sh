@@ -2,6 +2,7 @@
 
 set -e # fail fast
 set -x # print commands
+echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 cd CheckingBranches
 ll -a
 echo "-----------------"
