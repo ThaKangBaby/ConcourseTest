@@ -8,7 +8,7 @@ ls -la
 echo "-----------------"
 git config --local -l
 echo "-----------------"
-git fetch -v
+# git fetch -v
 echo "-----------------"
 git status
 echo "-----------------"
@@ -19,7 +19,7 @@ echo "-----------------"
 git branch -rv --list "origin/ready/*"
 
 
-readybranch= $(git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//")
+readybranch=$(git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//")
 
 echo $readybranch
 
