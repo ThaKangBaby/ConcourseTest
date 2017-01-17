@@ -27,7 +27,7 @@ ls -la
 
 #new --------------------------------------------
 
-readybranch=$(readybranch=$(git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//"))
+readybranch=$(git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//")
 echo -----readyBranch------
 echo $readybranch
 
