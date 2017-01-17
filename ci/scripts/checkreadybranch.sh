@@ -34,17 +34,20 @@ ls -la
 #new --------------------------------------------
 
 readybranch=$(readybranch=$(git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//"))
-
+echo -----------
 echo $readybranch
 
 git checkout $readybranch
 
+echo -----------
 echo PULL
 git pull --rebase master
 
+echo -----------
 echo CHECKOUT_MASTER
 git checkout master
 
+echo -----------
 echo SQUASH
 git merge --squash $readybranch
 
