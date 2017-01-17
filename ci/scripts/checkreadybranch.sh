@@ -23,19 +23,21 @@ ls -la
 
 # echo $readybranch
 
-# if [ "$readybranch" ]; then
-#     echo "exit 0 - Ready Branch found!"
-#     exit 0
-# else
-#     echo "exit 1 - No Ready Branches found"
-#     exit 1
-# fi
+
 
 #new --------------------------------------------
 
 readybranch=$(readybranch=$(git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//"))
-echo -----------
+echo -----readyBranch------
 echo $readybranch
+
+if [ "$readybranch" ]; then
+    echo "exit 0 - Ready Branch found!"
+    exit 0
+else
+    echo "exit 1 - No Ready Branches found"
+    exit 1
+fi
 
 git checkout $readybranch
 
