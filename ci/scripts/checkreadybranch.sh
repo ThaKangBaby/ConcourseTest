@@ -16,17 +16,40 @@ ls -la
 # echo "-----------------"
 # git branch -avv
 # echo "-----------------"
-git branch -rv --list "origin/ready/*"
+# git branch -rv --list "origin/ready/*"
 
 
-readybranch=$(git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//")
+# readybranch=$(git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//")
 
-echo $readybranch
+# echo $readybranch
 
-if [ "$readybranch" ]; then
-    echo "exit 0 - Ready Branch found!"
-    exit 0
+# if [ "$readybranch" ]; then
+#     echo "exit 0 - Ready Branch found!"
+#     exit 0
+# else
+#     echo "exit 1 - No Ready Branches found"
+#     exit 1
+# fi
+
+#new --------------------------------------------
+
+readybranch=$(readybranch=$(git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//"))
+
+if [ $readybranch != "" ]
+    then exit 0;
 else
-    echo "exit 1 - No Ready Branches found"
-    exit 1
+    exit 1;
 fi
+
+git checkout $readybranch
+
+git pull --rebase master
+
+git checkout master
+
+git merge --squash $readybranch
+
+jekyll --version
+touch ../integration/results.txt
+jekyll build --source Praqma.com --destination ../integration > ../integration/results.txt
+cat ../integration/results.txt

@@ -14,15 +14,15 @@ resources:
        git_config:
        - name: core.bigFileThreshold
          value: 10m
-   - name: Praqma.com
-     type: git
-     source:
-       uri: git@github.com:ThaKangBaby/praqma.com.git
-       branch: gh-pages
-       private_key: {{private_key}}
-       git_config:
-       - name: core.bigFileThreshold
-         value: 10m
+  #  - name: Praqma.com
+  #    type: git
+  #    source:
+  #      uri: git@github.com:ThaKangBaby/praqma.com.git
+  #      branch: gh-pages
+  #      private_key: {{private_key}}
+  #      git_config:
+  #      - name: core.bigFileThreshold
+  #        value: 10m
   #  - name: fetch-ready-branches
   #    type: time
   #    source:
