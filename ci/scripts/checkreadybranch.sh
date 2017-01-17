@@ -3,12 +3,10 @@
 set -e # fail fast
 set -x # print commands
 
-findReadyBranches(){
-    return $(git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//")
-}
+git branch -r --list "origin/ready/*"
 
 cd CheckingBranches
-readybranch=$(findReadyBranches)
+readybranch= $(git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//")
 
 echo $readybranch
 
