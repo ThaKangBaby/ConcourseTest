@@ -3,6 +3,9 @@
 set -e # fail fast
 set -x # print commands
 cd CheckingBranches
+ll -a
+echo "-----------------"
+git config --local -l
 echo "-----------------"
 git fetch -v
 echo "-----------------"
