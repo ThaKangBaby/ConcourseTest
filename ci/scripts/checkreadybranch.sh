@@ -4,6 +4,8 @@ set -e # fail fast
 set -x # print commands
 cd CheckingBranches
 echo "-----------------"
+git fetch -v
+echo "-----------------"
 git status
 echo "-----------------"
 git --version
