@@ -4,6 +4,7 @@ resource_types:
     source:
       repository: vito/git-branch-heads-resource
 
+
 resources:
    - name: CheckingBranches
      type: git-branch-heads
@@ -14,15 +15,20 @@ resources:
        git_config:
        - name: core.bigFileThreshold
          value: 10m
-  #  - name: Praqma.com
-  #    type: git
-  #    source:
-  #      uri: git@github.com:ThaKangBaby/praqma.com.git
-  #      branch: gh-pages
-  #      private_key: {{private_key}}
-  #      git_config:
-  #      - name: core.bigFileThreshold
-  #        value: 10m
+   - name: Praqma.com
+     type: git-branch-heads
+     source:
+       uri: git@github.com:ThaKangBaby/praqma.com.git
+       branch: [ready/*]
+       private_key: {{private_key}}
+       git_config:
+       - name: core.bigFileThreshold
+         value: 10m
+   - name: slack-alert
+     type: slack-notification
+     source:
+      url: https://hooks.slack.com/services/XXXX
+
   #  - name: fetch-ready-branches
   #    type: time
   #    source:
@@ -32,11 +38,20 @@ jobs:
 - name: Check-Ready-Branch
   plan:
   - get: CheckingBranches
-    trigger: false
-  - get: Praqma.com
     trigger: true
+  - get: Praqma.com
+    trigger: false
   - task: Check-ready-branches
     file: CheckingBranches/ci/tasks/buildtest.yml
+    params:
+      private_key: {{private_key}}
+  - put: slack-alert
+    params:
+      always_notify: true
+      username: Concourse
+      channel: '#my_channel'
+      text_file: integration/results.txt
+
   # - put: ConcourseTest
   #   params: {repository: integration}
   # - task: job-integration
