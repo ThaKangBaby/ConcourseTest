@@ -3,8 +3,8 @@
 set -e # fail fast
 set -x # print commands
 # echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-cd CheckingBranches
-ls -la
+# cd CheckingBranches
+# ls -la
 # echo "-----------------"
 # git config --local -l
 # echo "-----------------"
@@ -23,9 +23,10 @@ ls -la
 
 # echo $readybranch
 
-
+git clone Praqma.com integration
 
 #new --------------------------------------------
+cd integration
 
 readybranch=${$(git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//")#*/}
 echo -----readyBranch------
@@ -33,7 +34,7 @@ echo $readybranch
 
 if [ "$readybranch" ]; then
     echo "exit 0 - Ready Branch found!"
-    
+
 else
     echo "exit 1 - No Ready Branches found"
     exit 1
