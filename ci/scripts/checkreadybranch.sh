@@ -35,21 +35,20 @@ ls -la
 
 readybranch=$(readybranch=$(git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//"))
 
-if [ $readybranch != "" ]
-    then exit 0;
-else
-    exit 1;
-fi
+echo $readybranch
 
 git checkout $readybranch
 
+echo PULL
 git pull --rebase master
 
+echo CHECKOUT_MASTER
 git checkout master
 
+echo SQUASH
 git merge --squash $readybranch
 
-jekyll --version
-touch ../integration/results.txt
-jekyll build --source Praqma.com --destination ../integration > ../integration/results.txt
-cat ../integration/results.txt
+# jekyll --version
+# touch ../integration/results.txt
+# jekyll build --source Praqma.com --destination ../integration > ../integration/results.txt
+# cat ../integration/results.txt
