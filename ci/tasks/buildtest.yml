@@ -6,6 +6,7 @@ image_resource:
 
 inputs:
 - name: CheckingBranches
+  path: tmp/
 - name: Praqma.com
 
 
