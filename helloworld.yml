@@ -28,8 +28,6 @@ resources:
      type: slack-notification
      source:
       url: https://hooks.slack.com/services/XXXX
-   - name: stuff
-     mykey: foobar
   #  - name: fetch-ready-branches
   #    type: time
   #    source:
@@ -43,7 +41,6 @@ jobs:
     private_key: {{private_key}}
   - get: Praqma.com
     trigger: false
-  - get: stuff
   - task: Check-ready-branches
     file: CheckingBranches/ci/tasks/buildtest.yml
     params:
