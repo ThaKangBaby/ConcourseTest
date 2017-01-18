@@ -7,11 +7,10 @@ image_resource:
 inputs:
 - name: CheckingBranches
 - name: Praqma.com
+- name: private_key
 
 outputs:
 - name: integration
 
 run:
   path: CheckingBranches/ci/scripts/checkreadybranch.sh
-  params:
-    test:{{private_key}}
