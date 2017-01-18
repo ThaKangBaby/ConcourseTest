@@ -4,9 +4,11 @@ image_resource:
   type: docker-image
   source: {repository: praqma/gh-pages}
 
+params:
+  key_file: /tmp/git-resource-private-key
+
 inputs:
 - name: CheckingBranches
-  path: tmp/
 - name: Praqma.com
 
 
