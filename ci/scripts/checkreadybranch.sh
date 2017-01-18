@@ -33,10 +33,11 @@ git clone Praqma.com integration
 cd integration
 
 readybranch=${$(git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//")#*/}
+readybranch2=${readybranch#*/}
 echo -----readyBranch------
-echo $readybranch
+echo $readybranch2
 
-if [ "$readybranch" ]; then
+if [ "$readybranch2" ]; then
     echo "exit 0 - Ready Branch found!"
 
 else
@@ -44,7 +45,7 @@ else
     exit 1
 fi
 
-git checkout $readybranch
+git checkout $readybranch2
 
 echo -----------
 echo PULL

@@ -38,7 +38,6 @@ jobs:
   plan:
   - get: CheckingBranches
     trigger: true
-    # private_key: {{private_key}}
   - get: Praqma.com
     trigger: false
   - task: Check-ready-branches
