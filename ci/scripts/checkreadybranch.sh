@@ -32,7 +32,7 @@ git clone Praqma.com integration
 #new --------------------------------------------
 cd integration
 
-readybranch=${$(git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//")#*/}
+readybranch=$(git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//")
 readybranch2=${readybranch#*/}
 echo -----readyBranch------
 echo $readybranch2
