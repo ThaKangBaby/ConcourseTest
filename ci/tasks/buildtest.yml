@@ -13,4 +13,4 @@ outputs:
 
 run:
   path: CheckingBranches/ci/scripts/checkreadybranch.sh
-  args: CheckingBranches/private_key
+  params: {{$private_key}}
