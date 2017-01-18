@@ -17,6 +17,9 @@ set -x # print commands
 # git branch -avv
 # echo "-----------------"
 # git branch -rv --list "origin/ready/*"
+echo "-----------------"
+env
+echo "-----------------"
 
 ls -la /tmp/build
 

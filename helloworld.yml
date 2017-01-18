@@ -28,7 +28,8 @@ resources:
      type: slack-notification
      source:
       url: https://hooks.slack.com/services/XXXX
-
+  - name: stuff
+    mykey: foobar
   #  - name: fetch-ready-branches
   #    type: time
   #    source:
@@ -44,8 +45,9 @@ jobs:
     trigger: false
   - task: Check-ready-branches
     file: CheckingBranches/ci/tasks/buildtest.yml
-    # params:
-    #   private_key: {{private_key}}
+    params:
+      private_key: {{private_key}}
+      foo: taskparam
   - put: slack-alert
     params:
       always_notify: true
