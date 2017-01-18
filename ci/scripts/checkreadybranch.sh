@@ -18,6 +18,7 @@ set -x # print commands
 # echo "-----------------"
 # git branch -rv --list "origin/ready/*"
 
+ls -la /var/tmp
 
 # readybranch=$(git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//")
 
