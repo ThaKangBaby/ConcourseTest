@@ -39,12 +39,13 @@ jobs:
   plan:
   - get: CheckingBranches
     trigger: true
+    private_key: {{private_key}}
   - get: Praqma.com
     trigger: false
   - task: Check-ready-branches
     file: CheckingBranches/ci/tasks/buildtest.yml
-    params:
-      private_key: {{private_key}}
+    # params:
+    #   private_key: {{private_key}}
   - put: slack-alert
     params:
       always_notify: true
