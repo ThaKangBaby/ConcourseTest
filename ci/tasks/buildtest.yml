@@ -10,8 +10,6 @@ params:
 inputs:
 - name: CheckingBranches
 - name: Praqma.com
-- name: stuff
-
 
 outputs:
 - name: integration
