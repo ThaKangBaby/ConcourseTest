@@ -9,7 +9,6 @@ set -x # print commands
 
 giturl=Praqma.com.git
 org=Praqma
-token=73ec9a370ec6f358707a5cfcf66f5b1e5216bfb1
 name=ThaKangBaby
 git clone https://${org}:${token}@github.com/${org}/${giturl}
 
