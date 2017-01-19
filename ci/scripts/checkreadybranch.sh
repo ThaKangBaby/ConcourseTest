@@ -36,7 +36,7 @@ echo -----------
 echo PULL
 git fetch
 git branch -a
-git pull --rebase gh-pages
+git pull --rebase origin gh-pages
 
 echo -----------
 echo CHECKOUT_MASTER
