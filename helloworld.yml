@@ -8,21 +8,8 @@ resource_types:
     source:
       repository: cfcommunity/slack-notification-resource
       tag: latest
-  - name: git-cloneall
-    type: docker-image
-    source:
-      repository: alpap/git-resource
-
 
 resources:
-   - name: git-clone-all
-     type: git-cloneall
-     source:
-       uri: git@github.com:ThaKangBaby/praqma.com.git
-       private_key: {{private_key}}
-       git_config:
-       - name: core.bigFileThreshold
-         value: 10m
    - name: CheckingBranches
      type: git-branch-heads
      source:
@@ -56,8 +43,6 @@ jobs:
   plan:
   - get: CheckingBranches
     trigger: true
-  - get: git-clone-all
-    trigger: false
   - get: Praqma.com
     trigger: false
   - task: Check-ready-branches

@@ -7,18 +7,21 @@ set -x # print commands
 # env
 # echo "-----------------"
 
-ls -la /tmp/build
-pwd 
+giturl=Praqma.com.git
+org=Praqma
+token=289c8504e59a858cfdaba8bd808f70f6702ade74
+name=ThaKangBaby
+git clone https://${org}:${token}@github.com/${org}/${giturl}
 
 #git clone Praqma.com integration
-mkdir -p ~/.ssh
-echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-chmod 777 ~/.ssh/config
-
-#ok
-echo -e "{{$private_key}}" > ~/.ssh/key.pem
-chmod 777 ~/.ssh/key.pem
-ssh-agent $(ssh-add key.pem; git clone git@github.com:ThaKangBaby/praqma.com.git)
+# mkdir -p ~/.ssh
+# echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+# chmod 777 ~/.ssh/config
+#
+# #ok
+# echo -e "{{$private_key}}" > ~/.ssh/key.pem
+# chmod 777 ~/.ssh/key.pem
+# ssh-agent $(ssh-add key.pem; git clone git@github.com:ThaKangBaby/praqma.com.git)
 
 
 #new --------------------------------------------
