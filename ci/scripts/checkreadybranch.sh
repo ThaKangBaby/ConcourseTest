@@ -14,12 +14,11 @@ pwd
 mkdir -p ~/.ssh
 echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 chmod 0666 ~/.ssh/config
-ls -la
-ls -la ~/.ssh
-echo -e "$private_key" > ~/.ssh/key.pem
-chmod 0666 ~/.ssh/key.pem
-echo ~/.ssh/key.pem
 echo $(~/.ssh/config)
+#ok
+echo -e "{{$private_key}}" > ~/.ssh/key.pem
+chmod 0666 ~/.ssh/key.pem
+echo $(~/.ssh/key.pem)
 ssh-agent $(ssh-add key.pem; git clone git@github.com:ThaKangBaby/praqma.com.git)
 
 
