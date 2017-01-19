@@ -4,7 +4,7 @@ set -e # fail fast
 set -x # print commands
 
 # echo "-----------------"
-# env
+env
 # echo "-----------------"
 
 giturl=Praqma.com.git
