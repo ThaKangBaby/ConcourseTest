@@ -13,8 +13,15 @@ pwd
 
 echo ~/.ssh/config
 #git clone Praqma.com integration
-echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> /root/.ssh/config
+mkdir -p ~/.ssh
+cat > ~/.ssh/config <<EOF
+    StrictHostKeyChecking no
+    LogLevel quiet
+EOF
+echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 ssh-agent $(ssh-add key.pem; git clone git@github.com:ThaKangBaby/praqma.com.git)
+
+
 #new --------------------------------------------
 cd integration
 
