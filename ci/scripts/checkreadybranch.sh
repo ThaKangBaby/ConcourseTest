@@ -13,18 +13,7 @@ name=ThaKangBaby
 cd integration
 git clone https://${org}:${token}@github.com/${name}/${giturl}
 
-#git clone Praqma.com integration
-# mkdir -p ~/.ssh
-# echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-# chmod 777 ~/.ssh/config
-#
-# #ok
-# echo -e "{{$private_key}}" > ~/.ssh/key.pem
-# chmod 777 ~/.ssh/key.pem
-# ssh-agent $(ssh-add key.pem; git clone git@github.com:ThaKangBaby/praqma.com.git)
-
-
-#new --------------------------------------------
+cd Praqma.com
 
 readybranch=$(git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//")
 readybranch2=${readybranch#*/}
