@@ -3,9 +3,27 @@ resource_types:
     type: docker-image
     source:
       repository: vito/git-branch-heads-resource
-
+  - name: slack-notification
+    type: docker-image
+    source:
+      repository: cfcommunity/slack-notification-resource
+      tag: latest
+  - name: git-clone-all
+    type: docker-image
+    source:
+      repository: alpap/git-resource
+      tag: latest
 
 resources:
+
+  - name: git-clone-all
+     type: git-branch-heads
+     source:
+       uri: git@github.com:ThaKangBaby/praqma.com.git
+       private_key: {{private_key}}
+       git_config:
+       - name: core.bigFileThreshold
+         value: 10m
    - name: CheckingBranches
      type: git-branch-heads
      source:
@@ -16,10 +34,10 @@ resources:
        - name: core.bigFileThreshold
          value: 10m
    - name: Praqma.com
-     type: git-branch-heads
+     type: git
      source:
        uri: git@github.com:ThaKangBaby/praqma.com.git
-       branch: [ready/*]
+       branch: gh-pages
        private_key: {{private_key}}
        git_config:
        - name: core.bigFileThreshold
@@ -28,6 +46,7 @@ resources:
      type: slack-notification
      source:
       url: https://hooks.slack.com/services/XXXX
+   
   #  - name: fetch-ready-branches
   #    type: time
   #    source:
@@ -38,13 +57,12 @@ jobs:
   plan:
   - get: CheckingBranches
     trigger: true
+  - get: git-clone-all
+    trigger: false
   - get: Praqma.com
     trigger: false
   - task: Check-ready-branches
     file: CheckingBranches/ci/tasks/buildtest.yml
-    params:
-      private_key: {{private_key}}
-      foo: taskparam
   - put: slack-alert
     params:
       always_notify: true
