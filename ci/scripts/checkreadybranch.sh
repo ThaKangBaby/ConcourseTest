@@ -9,7 +9,7 @@ set -x # print commands
 
 ls -la /tmp/build
 echo $private_key > key.pem
-cat key.pem
+
 #git clone Praqma.com integration
 echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 ssh-agent $(ssh-add key.pem; git clone git@github.com:ThaKangBaby/praqma.com.git)
