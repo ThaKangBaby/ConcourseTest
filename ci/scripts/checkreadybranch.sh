@@ -10,6 +10,7 @@ env
 giturl=Praqma.com.git
 org=Praqma
 name=ThaKangBaby
+cd integration
 git clone https://${org}:${token}@github.com/${org}/${giturl}
 
 #git clone Praqma.com integration
@@ -24,7 +25,6 @@ git clone https://${org}:${token}@github.com/${org}/${giturl}
 
 
 #new --------------------------------------------
-cd integration
 
 readybranch=$(git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//")
 readybranch2=${readybranch#*/}
