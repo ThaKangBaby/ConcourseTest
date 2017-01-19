@@ -12,10 +12,9 @@ resource_types:
     type: docker-image
     source:
       repository: alpap/git-resource
-      
+
 
 resources:
-
   - name: git-clone-all
      type: git-branch-heads
      source:
@@ -46,7 +45,7 @@ resources:
      type: slack-notification
      source:
       url: https://hooks.slack.com/services/XXXX
-   
+
   #  - name: fetch-ready-branches
   #    type: time
   #    source:
