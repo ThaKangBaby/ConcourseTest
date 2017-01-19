@@ -10,7 +10,7 @@ set -x # print commands
 ls -la /tmp/build
 
 #git clone Praqma.com integration
-ssh-agent $(ssh-add /somewhere/yourkey; git clone git@github.com:ThaKangBaby/praqma.com.git)
+ssh-agent $(ssh-add {{$private_key}}; git clone git@github.com:ThaKangBaby/praqma.com.git)
 #new --------------------------------------------
 cd integration
 
