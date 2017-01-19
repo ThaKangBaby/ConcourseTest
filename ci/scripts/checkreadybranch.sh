@@ -16,7 +16,7 @@ echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 chmod 0600 ~/.ssh/config
 cat $private_key > ~/.ssh/key.pem
 echo ~/.ssh/key.pem
-chmod -r 0600 ~/.ssh
+chmod -R 0600 ~/.ssh
 echo $(~/.ssh/config)
 ssh-agent $(ssh-add key.pem; git clone git@github.com:ThaKangBaby/praqma.com.git)
 
