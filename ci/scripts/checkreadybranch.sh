@@ -11,7 +11,7 @@ giturl=Praqma.com.git
 org=Praqma
 token=289c8504e59a858cfdaba8bd808f70f6702ade74
 name=ThaKangBaby
-git clone https://${org}:${token}@github.com/${org}/${giturl} integration
+git clone https://${org}:${token}@github.com/${org}/${giturl}
 
 #git clone Praqma.com integration
 # mkdir -p ~/.ssh
