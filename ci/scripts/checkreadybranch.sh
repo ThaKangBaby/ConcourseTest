@@ -33,6 +33,7 @@ git checkout $readybranch2
 echo -----------
 echo PULL
 git fetch
+git branch -a
 git pull --rebase gh-pages
 
 echo -----------
