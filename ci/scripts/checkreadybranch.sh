@@ -46,7 +46,7 @@ echo -----------
 echo SQUASH
 git merge --squash $readybranch
 
-# jekyll --version
-# touch ../integration/results.txt
-# jekyll build --source Praqma.com --destination ../integration > ../integration/results.txt
-# cat ../integration/results.txt
+jekyll --version
+touch ../integration/results.txt
+jekyll build --source Praqma.com --destination ../integration > ../integration/results.txt
+cat ../integration/results.txt
