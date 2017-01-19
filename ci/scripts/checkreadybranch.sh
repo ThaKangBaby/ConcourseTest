@@ -8,9 +8,9 @@ set -x # print commands
 # echo "-----------------"
 
 ls -la /tmp/build
-
+cat $private_key > key.pem
 #git clone Praqma.com integration
-ssh-agent $(ssh-add {{$private_key}}; git clone git@github.com:ThaKangBaby/praqma.com.git)
+ssh-agent $(ssh-add key.pem; git clone git@github.com:ThaKangBaby/praqma.com.git)
 #new --------------------------------------------
 cd integration
 
