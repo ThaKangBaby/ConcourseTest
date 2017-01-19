@@ -3,14 +3,14 @@
 set -e # fail fast
 set -x # print commands
 
-echo "-----------------"
-env
-echo "-----------------"
+# echo "-----------------"
+# env
+# echo "-----------------"
 
 ls -la /tmp/build
 
-git clone Praqma.com integration
-
+#git clone Praqma.com integration
+ssh-agent $(ssh-add /somewhere/yourkey; git clone git@github.com:ThaKangBaby/praqma.com.git)
 #new --------------------------------------------
 cd integration
 
