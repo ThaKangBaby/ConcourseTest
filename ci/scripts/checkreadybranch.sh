@@ -28,6 +28,8 @@ else
     exit 1
 fi
 
+git checkout gh-pages
+
 git checkout $readybranch2
 
 echo -----------
