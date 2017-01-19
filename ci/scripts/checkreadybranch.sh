@@ -32,6 +32,7 @@ git checkout $readybranch2
 
 echo -----------
 echo PULL
+git fetch
 git pull --rebase gh-pages
 
 echo -----------
