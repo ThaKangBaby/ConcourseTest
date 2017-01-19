@@ -14,7 +14,7 @@ pwd
 mkdir -p ~/.ssh
 echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 chmod 0600 ~/.ssh/config
-sed -i "$private_key" > ~/.ssh/key.pem
+echo -e "$private_key" > ~/.ssh/key.pem
 echo ~/.ssh/key.pem
 chmod -R 0600 ~/.ssh
 echo $(~/.ssh/config)
