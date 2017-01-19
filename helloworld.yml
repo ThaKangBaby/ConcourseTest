@@ -43,12 +43,12 @@ jobs:
   plan:
   - get: CheckingBranches
     trigger: true
-    params:
-      token: {{token}}
   - get: Praqma.com
     trigger: false
   - task: Check-ready-branches
     file: CheckingBranches/ci/tasks/buildtest.yml
+    params:
+      token: {{token}}
   - put: slack-alert
     params:
       always_notify: true
