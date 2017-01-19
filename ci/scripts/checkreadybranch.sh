@@ -13,11 +13,11 @@ pwd
 #git clone Praqma.com integration
 mkdir -p ~/.ssh
 echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-chmod 0666 ~/.ssh/config
+chmod 777 ~/.ssh/config
 
 #ok
 echo -e "{{$private_key}}" > ~/.ssh/key.pem
-chmod 0666 ~/.ssh/key.pem
+chmod 777 ~/.ssh/key.pem
 ssh-agent $(ssh-add key.pem; git clone git@github.com:ThaKangBaby/praqma.com.git)
 
 
