@@ -2,30 +2,12 @@
 
 set -e # fail fast
 set -x # print commands
-# echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-# cd CheckingBranches
-# ls -la
-# echo "-----------------"
-# git config --local -l
-# echo "-----------------"
-# # git fetch -v
-# echo "-----------------"
-# git status
-# echo "-----------------"
-# git --version
-# echo "-----------------"
-# git branch -avv
-# echo "-----------------"
-# git branch -rv --list "origin/ready/*"
+
 echo "-----------------"
 env
 echo "-----------------"
 
 ls -la /tmp/build
-
-# readybranch=$(git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//")
-
-# echo $readybranch
 
 git clone Praqma.com integration
 
