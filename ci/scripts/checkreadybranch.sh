@@ -4,7 +4,7 @@ set -e # fail fast
 set -x # print commands
 
 # echo "-----------------"
-env
+# env
 # echo "-----------------"
 
 giturl=Praqma.com.git
@@ -32,11 +32,11 @@ git checkout $readybranch2
 
 echo -----------
 echo PULL
-git pull --rebase master
+git pull --rebase gh-pages
 
 echo -----------
 echo CHECKOUT_MASTER
-git checkout master
+git checkout gh-pages
 
 echo -----------
 echo SQUASH
