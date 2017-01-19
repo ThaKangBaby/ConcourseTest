@@ -8,14 +8,15 @@ set -x # print commands
 # echo "-----------------"
 
 ls -la /tmp/build
-echo $private_key > key.pem
 pwd 
 
-echo ~/.ssh/config
 #git clone Praqma.com integration
 mkdir -p ~/.ssh
 echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-echo ~/.ssh/config
+chmod 0600 ~/.ssh/config
+echo $private_key > ~/.ssh/key.pem
+chmod 0600 ~/.ssh/key.pem
+echo $(~/.ssh/config)
 ssh-agent $(ssh-add key.pem; git clone git@github.com:ThaKangBaby/praqma.com.git)
 
 
