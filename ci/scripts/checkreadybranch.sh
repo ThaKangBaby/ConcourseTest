@@ -11,7 +11,7 @@ giturl=Praqma.com.git
 org=Praqma
 name=ThaKangBaby
 cd integration
-git clone https://${org}:${token}@github.com/${org}/${giturl}
+git clone https://${org}:${token}@github.com/${name}/${giturl}
 
 #git clone Praqma.com integration
 # mkdir -p ~/.ssh
