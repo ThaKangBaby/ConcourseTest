@@ -32,17 +32,19 @@ jekyll build --source Praqma.com --destination ../integration > ../integration/r
 cat ../integration/results.txt
 
 if [ $? -eq 0 ]; then
-    
+
     #On test success
     #Push master to origin
+    git push origin master
     ls -la ../integration
 
 fi
 
+
 #Do this no matter outcome
-Delete the ready branch 
-#git branch -dr $readybranch
+#Delete the ready branch
+git branch -dr $readybranch
+
 #git push origin :$readybranch
 
 git fetch --prune
-
