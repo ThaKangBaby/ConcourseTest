@@ -61,7 +61,6 @@ if [ $? -eq 0 ]; then
     #Push master to origin
     cd Praqma.com
     git push origin gh-pages
-    ls -la ../integration
 
 fi
 
