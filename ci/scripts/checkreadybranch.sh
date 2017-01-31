@@ -67,7 +67,8 @@ fi
 
 #Do this no matter outcome
 #Delete the ready branch
-git branch -dr $readybranch2
+#git branch -dr $readybranch2
+git push origin :$readybranch2
 
 #git push origin :$readybranch
 
