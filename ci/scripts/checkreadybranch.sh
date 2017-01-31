@@ -59,7 +59,7 @@ if [ $? -eq 0 ]; then
 
     #On test success
     #Push master to origin
-    git push origin master
+    git push origin gh-pages
     ls -la ../integration
 
 fi
