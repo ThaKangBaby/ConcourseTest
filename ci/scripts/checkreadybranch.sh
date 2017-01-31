@@ -4,7 +4,7 @@ set -e # fail fast
 set -x # print commands
 
 #Create a file for on_success use to send with email
-touch /integration/success.txt
+touch integration/success.txt
 echo "TEST successfully completed" >> /integration/success.txt
 
 #Create a file for on_failure use to send with email
