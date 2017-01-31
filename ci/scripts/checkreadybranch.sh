@@ -54,3 +54,21 @@ mkdir /release
 jekyll build --source Praqma.com --destination release > results.txt
 echo ----------
 cat results.txt
+
+if [ $? -eq 0 ]; then
+
+    #On test success
+    #Push master to origin
+    git push origin master
+    ls -la ../integration
+
+fi
+
+
+#Do this no matter outcome
+#Delete the ready branch
+git branch -dr $readybranch
+
+#git push origin :$readybranch
+
+git fetch --prune
