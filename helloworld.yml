@@ -3,11 +3,10 @@ resource_types:
     type: docker-image
     source:
       repository: vito/git-branch-heads-resource
-  - name: slack-notification
+  - name: email
     type: docker-image
     source:
-      repository: cfcommunity/slack-notification-resource
-      tag: latest
+      repository: pcfseceng/email-resource
 
 resources:
    - name: CheckingBranches
@@ -28,15 +27,16 @@ resources:
        git_config:
        - name: core.bigFileThreshold
          value: 10m
-   - name: slack-alert
-     type: slack-notification
+   - name: send-an-email
+     type: email
      source:
-      url: https://hooks.slack.com/services/XXXX
-
-  #  - name: fetch-ready-branches
-  #    type: time
-  #    source:
-  #      interval: 10s
+       smtp:
+         host: {{smtp-host}}
+         port: {{smtp-port}}
+         username: {{smtp-username}}
+         password: {{smtp-password}}
+       from: {{email-from}}
+       to: [ {{email-to}} ]
 
 jobs:
 - name: Check-Ready-Branch
@@ -49,14 +49,9 @@ jobs:
     file: CheckingBranches/ci/tasks/buildtest.yml
     params:
       token: {{token}}
-  - put: slack-alert
+      output_subject_file: integration/results.txt
+      output_body_file: integration/results.txt
+  - put: send-an-email
     params:
-      always_notify: true
-      username: Concourse
-      channel: '#my_channel'
-      text_file: integration/results.txt
-
-  # - put: ConcourseTest
-  #   params: {repository: integration}
-  # - task: job-integration
-  #   file: ConcourseTest/ci/tasks/job-integration.yml
+      subject: integration/results.txt
+      body: integration/results.txt
