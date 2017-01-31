@@ -3,10 +3,14 @@
 set -e # fail fast
 set -x # print commands
 
-# echo "-----------------"
-# env
-# echo "-----------------"
+#Create a file for on_success use to send with email
+#touch /integration/success.txt
+echo "TEST successfully completed" >> /integration/success.txt
 
+#Create a file for on_failure use to send with email
+
+
+#Git clone website
 giturl=Praqma.com.git
 org=Praqma
 name=ThaKangBaby
@@ -15,6 +19,7 @@ git clone https://${name}:${token}@github.com/${name}/${giturl}
 
 cd Praqma.com
 
+#Check for ready branches
 readybranch=$(git branch -r --list "origin/ready/*" | tail -1 | sed "s/^[ \t]*//")
 readybranch2=${readybranch#*/}
 echo -----readyBranch------
@@ -28,6 +33,7 @@ else
     exit 1
 fi
 
+#Starting PIP
 git checkout gh-pages
 
 git checkout $readybranch2
@@ -46,8 +52,10 @@ echo -----------
 echo SQUASH
 git merge --squash $readybranch
 
+
 cd ..
 
+#Starting jekyll build test
 jekyll --version
 touch /results.txt
 mkdir /release
@@ -55,6 +63,7 @@ jekyll build --source Praqma.com --destination release > results.txt
 echo ----------
 cat results.txt
 
+#If no errors so far then Git push master to origin
 if [ $? -eq 0 ]; then
 
     #On test success
@@ -64,12 +73,7 @@ if [ $? -eq 0 ]; then
 
 fi
 
-
 #Do this no matter outcome
-#Delete the ready branch
-#git branch -dr $readybranch2
+#Delete the remote ready branch
 git push origin :$readybranch2
-
-#git push origin :$readybranch
-
 git fetch --prune
