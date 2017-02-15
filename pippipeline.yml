@@ -49,4 +49,4 @@ jobs:
       params:
         channel: '#concoursebuildresults'
         # text: |
-          Result: $integration/success.txt
+        Result: $integration/success.txt
