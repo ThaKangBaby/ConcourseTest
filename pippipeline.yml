@@ -44,9 +44,11 @@ jobs:
     file: CheckingBranches/ci/tasks/buildtest.yml
     params:
       token: {{token}}
+      # output_result_file: integration/results.txt
     on_failure:
       put: slack-alert
       params:
         channel: '#concoursebuildresults'
-        # text: |
-        Result: $integration/success.txt
+        text_file: integration/results.txt
+        text: |
+          Result: $TEXT_FILE_CONTENT

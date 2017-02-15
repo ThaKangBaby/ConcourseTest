@@ -29,7 +29,7 @@ if [ "$readybranch2" ]; then
     echo "exit 0 - Ready Branch found!"
 
 else
-    echo "exit 1 - No Ready Branches found"
+    echo "exit 1 - No Ready Branches found" > ../results.txt
     exit 1
 fi
 
