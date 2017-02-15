@@ -49,4 +49,4 @@ jobs:
       params:
         channel: '#concoursebuildresults'
         text: |
-        The build had a result. Check it out at:
+          The build had a result. Check it out at:
