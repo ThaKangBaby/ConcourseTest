@@ -48,5 +48,5 @@ jobs:
       put: slack-alert
       params:
         channel: '#concoursebuildresults'
-        text: |
+        # text: |
           Result: $integration/success.txt
