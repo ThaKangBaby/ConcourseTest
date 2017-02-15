@@ -3,10 +3,11 @@ resource_types:
     type: docker-image
     source:
       repository: vito/git-branch-heads-resource
-  - name: email
+  - name: slack-notification
     type: docker-image
     source:
-      repository: pcfseceng/email-resource
+      repository: cfcommunity/slack-notification-resource
+      tag: latest
 
 resources:
    - name: CheckingBranches
@@ -27,16 +28,10 @@ resources:
        git_config:
        - name: core.bigFileThreshold
          value: 10m
-   - name: send-an-email
-     type: email
+   - name: slack-alert
+     type: slack-notification
      source:
-       smtp:
-         host: {{smtp-host}}
-         port: {{smtp-port}}
-         username: {{smtp-username}}
-         password: {{smtp-password}}
-       from: {{email-from}}
-       to: [ {{email-to}} ]
+       url: {{slack-hook}}
 
 jobs:
 - name: Check-Ready-Branch
@@ -49,11 +44,9 @@ jobs:
     file: CheckingBranches/ci/tasks/buildtest.yml
     params:
       token: {{token}}
-      output_subject_file: integration/results.txt
-      output_body_file: integration/results.txt
-    on_success:
-      do:
-      - put: send-an-email
-        params:
-          subject: integration/success.txt
-          body: integration/results.txt
+    on_failure:
+      put: slack-alert
+      params:
+        channel: '#concoursebuildresults'
+        text: |
+        The build had a result. Check it out at:
